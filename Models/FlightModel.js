@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+// mongoose.pluralize(null);
 
 const FlightSchema = new Schema({
     flight_id: { type: String },
@@ -18,4 +19,4 @@ const FlightSchema = new Schema({
     status: { type: String },
 });
 
-module.exports = mongoose.model('flight', FlightSchema);
+module.exports = mongoose.model('flights', FlightSchema);
