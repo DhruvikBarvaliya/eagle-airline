@@ -3,7 +3,7 @@ const router = express.Router();
 const flightController = require('../Controllers/FlightController');
 
 router.get('/', (req, res) => {
-    res.send('Welcome to Eagle Airline');
+    res.send('Inside FlightRouter');
 });
 
 // router.get('/getAllFlight',flightController);

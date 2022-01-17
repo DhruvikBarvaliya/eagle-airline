@@ -1,24 +1,22 @@
-const flightService = require('../Services/FlightService')
+const bookingService = require('../Services/BookingService');
 
 module.exports = {
-
-    addFlight: (req, res) => {
+    addBooking: (req, res) => {
         const body = req.body;
-        flightService.create(body).then(result => {
+        bookingService.create(body).then(result => {
             if (result) {
                 res.json({
                     success: 1,
-                    message: "Flight Inserted",
+                    message: "Booking Inserted",
                     data: result
                 })
             } else {
                 res.json({
                     success: 0,
-                    message: "Fail to Insert",
+                    message: "Fail to Insert"
                 })
             }
         })
+
     }
-
-
 }
