@@ -2,23 +2,23 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const PassengerSchema = new Schema({
-    passenger_id: String,
-    first_name: String,
-    middle_name: String,
-    last_name: String,
-    date_of_birth: Date,
-    sex: String,
-    address: String,
-    city: String,
-    zip_code: String,
-    state: String,
-    country: String,
-    email_id: String,
-    user_name: String,
-    password: String,
-    confirm_password: String,
-    passport_no: String,
-    contact_no: String
+    passenger_id: { type: String},
+    first_name: { type: String},
+    middle_name: { type: String},
+    last_name: { type: String},
+    date_of_birth: { type: Date},
+    sex: { type: String},
+    address: { type: String},
+    city: { type: String},
+    zip_code: { type: String},
+    state: { type: String},
+    country: { type: String},
+    email_id: { type: String},
+    user_name: { type: String},
+    password: { type: String},
+    confirm_password: { type: String},
+    passport_no: { type: String},
+    contact_no: { type: String}
 });
 
 module.exports = mongoose.model('passenger', PassengerSchema);
