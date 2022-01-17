@@ -16,7 +16,7 @@ const FlightSchema = new Schema({
     airline_id: { type: String },
     airport_id: { type: String },
     fares: { type: Number },
-    status: { type: String },
+    status: { type: Boolean },
 });
 
 module.exports = mongoose.model('flights', FlightSchema);

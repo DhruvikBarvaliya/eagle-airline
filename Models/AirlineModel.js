@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+// mongoose.pluralize(null);
 
 const AirlineSchema = new Schema({
     airline_id: { type: String },
@@ -8,4 +9,4 @@ const AirlineSchema = new Schema({
     airline_three_digit_code: { type: String }
 });
 
-module.exports = mongoose.model('airline', AirlineSchema);
+module.exports = mongoose.model('airlines', AirlineSchema);

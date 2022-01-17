@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+// mongoose.pluralize(null);
 
 const BookingSchema = new Schema({
     booking_id: { type: String },
@@ -18,10 +19,10 @@ const BookingSchema = new Schema({
     depature_date_time: { type: Date },
     arrival_date_time: { type: Date },
     fare: { type: Number },
-    insurance: { type: String },
+    insurance: { type: Boolean },
     date_of_booking: { type: Date },
     date_of_travel: { type: Date },
 
 });
 
-module.exports = mongoose.model('booking', BookingSchema);
+module.exports = mongoose.model('bookings', BookingSchema);

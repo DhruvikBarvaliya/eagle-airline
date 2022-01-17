@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+// mongoose.pluralize(null);
 
 EmployeeSchema = new Schema({
     employee_id: { type: String },
@@ -11,7 +12,7 @@ EmployeeSchema = new Schema({
     sex: { type: String },
     address: { type: String },
     city: { type: String },
-    zip_code: { type: String },
+    zip_code: { type: Number },
     country: { type: String },
     email_id: { type: String },
     contact_no: { type: String },
@@ -26,3 +27,5 @@ EmployeeSchema = new Schema({
     position: { type: String },
     airport_id: { type: String }
 });
+
+module.exports=mongoose.model('employees',EmployeeSchema);

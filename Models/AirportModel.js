@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+// mongoose.pluralize(null);
 
 const AirportSchema = new Schema({
     airport_id: { type: String },
@@ -11,4 +12,4 @@ const AirportSchema = new Schema({
     airport_contact_no: { type: String }
 });
 
-module.exports = mongoose.model('airport', AirportSchema);
+module.exports = mongoose.model('airports', AirportSchema);

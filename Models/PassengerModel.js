@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+// mongoose.pluralize(null);
 
 const PassengerSchema = new Schema({
     passenger_id: { type: String },
@@ -10,7 +11,7 @@ const PassengerSchema = new Schema({
     sex: { type: String },
     address: { type: String },
     city: { type: String },
-    zip_code: { type: String },
+    zip_code: { type: Number },
     state: { type: String },
     country: { type: String },
     email_id: { type: String },
@@ -21,4 +22,4 @@ const PassengerSchema = new Schema({
     contact_no: { type: String }
 });
 
-module.exports = mongoose.model('passenger', PassengerSchema);
+module.exports = mongoose.model('passengers', PassengerSchema);

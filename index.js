@@ -5,9 +5,9 @@ const indexRouter = require('./Routes/index')
 const database = require('./Config/Database');
 
 database();
+
 app.use(express.json());
 app.use(express.urlencoded())
-
 app.use('/', indexRouter)
 
 app.listen(port, () => {
