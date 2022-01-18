@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const AirlineSchema = new Schema({
     airline_id: { type: String },
     airline_name: { type: String },
-    airline_capacity: { type: Number },
+    airline_capacity: { type: Number,default: '100' },
     airline_three_digit_code: { type: String }
 });
 

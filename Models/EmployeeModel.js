@@ -20,12 +20,12 @@ EmployeeSchema = new Schema({
     password: { type: String },
     confirm_password: { type: String },
     department_name: { type: String },
-    hired_date: { type: Date },
+    hired_date: { type: Date, default: Date.now },
     salary: { type: Number },
-    shift: { type: String },
+    shift: { type: String,default:'DayShift' },
     job_type: { type: String },
     position: { type: String },
-    airport_id: { type: String }
+    airport_id: { type: mongoose.Schema.Types.ObjectId, ref: 'airports' }
 });
 
-module.exports=mongoose.model('employees',EmployeeSchema);
+module.exports = mongoose.model('employees', EmployeeSchema);

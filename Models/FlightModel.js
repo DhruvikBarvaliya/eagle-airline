@@ -11,12 +11,12 @@ const FlightSchema = new Schema({
     depature_date_time: { type: Date },
     arrival_date_time: { type: Date },
     layover_time: { type: Date },
-    no_of_stope: { type: Number },
+    no_of_stope: { type: Number, default: 0 },
     distance: { type: Number },
-    airline_id: { type: String },
-    airport_id: { type: String },
+    airline_id: { type: mongoose.Schema.Types.ObjectId, ref: 'airlines' },
+    airport_id: { type: mongoose.Schema.Types.ObjectId, ref: 'airports' },
     fares: { type: Number },
-    status: { type: Boolean },
+    status: { type: Boolean, default: true },
 });
 
 module.exports = mongoose.model('flights', FlightSchema);

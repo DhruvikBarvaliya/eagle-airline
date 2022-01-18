@@ -6,11 +6,11 @@ router.get('/', (req, res) => {
     res.send('Inside FlightRouter');
 });
 
-// router.get('/getAllFlight',flightController);
-// router.get('/getFlightById',flightController);
+router.get('/getAllFlight', flightController.getAllFlight);
+router.get('/getFlightById', flightController.getFlightById);
 router.post('/addFlight', flightController.addFlight);
-// router.delete('/deleteFlight',flightController);
-// router.put('/updateFlight',flightController);
+router.put('/updateFlight', flightController.updateFlight);
+router.delete('/deleteFlight', flightController.deleteFlight);
 
 module.exports = router;
 
