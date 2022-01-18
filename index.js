@@ -7,7 +7,7 @@ const database = require('./Config/Database');
 database();
 
 app.use(express.json());
-app.use(express.urlencoded())
+app.use(express.urlencoded({ extended: true }))
 app.use('/', indexRouter)
 
 app.listen(port, () => {
