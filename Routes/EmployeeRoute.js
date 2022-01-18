@@ -6,6 +6,10 @@ router.get('/', (req, res) => {
     res.send("Inside EmployeeRouter");
 });
 
-router.post("/addEmployee", employeeController.addEmployee)
+router.get('/getAllEmployee', employeeController.getAllEmployee);
+router.get('/getEmployeeById/:id', employeeController.getEmployeeById);
+router.post('/addEmployee', employeeController.addEmployee);
+router.put('/updateEmployee/:id', employeeController.updateEmployee);
+router.delete('/deleteEmployee/:id', employeeController.deleteEmployee);
 
 module.exports = router;
