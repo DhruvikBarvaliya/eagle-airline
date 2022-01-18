@@ -7,10 +7,10 @@ router.get('/', (req, res) => {
 });
 
 router.get('/getAllFlight', flightController.getAllFlight);
-router.get('/getFlightById', flightController.getFlightById);
+router.get('/getFlightById/:id', flightController.getFlightById);
 router.post('/addFlight', flightController.addFlight);
-router.put('/updateFlight', flightController.updateFlight);
-router.delete('/deleteFlight', flightController.deleteFlight);
+router.put('/updateFlight/:id', flightController.updateFlight);
+router.delete('/deleteFlight/:id', flightController.deleteFlight);
 
 module.exports = router;
 
