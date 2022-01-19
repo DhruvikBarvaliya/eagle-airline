@@ -3,6 +3,10 @@ const airlineService = require('../Services/AirlineService');
 module.exports = {
 
     addAirline: (req, res) => {
+        /* const data = this.getAllAirline();
+        if (data) {
+            console.log("DATA");
+        } */
         const body = req.body
         airlineService.addAirline(body).then(result => {
             if (result) {
