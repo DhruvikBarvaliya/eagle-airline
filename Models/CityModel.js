@@ -9,5 +9,5 @@ const CitySchema = new Schema({
     city_country: { type: String }
 },
     { versionKey: false });
- 
+     
 module.exports = mongoose.model('citys', CitySchema)
