@@ -18,6 +18,6 @@ const FlightSchema = new Schema({
     fares: { type: Number ,required: true},
     status: { type: Boolean, default: true }
 },
-    { versionKey: false });
+    { versionKey: false }); 
 
 module.exports = mongoose.model('flights', FlightSchema);

@@ -18,7 +18,7 @@ const PassengerSchema = new Schema({
     user_name: { type: String,unique: true },
     password: { type: String,required: true },
     confirm_password: { type: String,required: true },
-    passport_no: { type: String,unique: true },
+    passport_no: { type: String },
     contact_no: { type: String,required: true }
 },
     { versionKey: false });

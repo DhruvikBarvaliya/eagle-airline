@@ -5,15 +5,15 @@ module.exports = {
         return employeeModel.create(data);
     },
     getAllEmployee: () => {
-        return emoloyeeModel.find();
+        return employeeModel.find();
     },
     getEmployeeById: id => {
-        return emoloyeeModel.findById(id);
+        return employeeModel.findById(id);
     },
     updateEmployee: (id, data) => {
-        return emoloyeeModel.findByIdAndUpdate(id, data);
+        return employeeModel.findByIdAndUpdate(id, data);
     },
     deleteEmployee: id => {
-        return emoloyeeModel.deleteOne({ _id: id });
+        return employeeModel.deleteOne({ _id: id });
     }
 }

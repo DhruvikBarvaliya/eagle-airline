@@ -7,7 +7,7 @@ EmployeeSchema = new Schema({
     first_name: { type: String,required: true },
     middle_name: { type: String },
     last_name: { type: String },
-    passport_no: { type: String,unique: true},
+    passport_no: { type: String},
     date_of_birth: { type: Date },
     sex: { type: String },
     address: { type: String },
