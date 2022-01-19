@@ -36,8 +36,7 @@ module.exports = {
         })
     },
     getAirlineById: (req, res) => {
-        // const id = parseInt(req.params.id);
-        const id = req.body.id;
+        const id = parseInt(req.params.id);
         airlineService.getAirlineById(id).then(result => {
             if (result) {
                 res.json({

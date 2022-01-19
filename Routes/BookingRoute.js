@@ -7,9 +7,9 @@ router.get('/', (req, res) => {
     res.send("Inside BookingRouter");
 });
 
+router.post('/addBooking', bookingController.addBooking);
 router.get('/getAllBooking', bookingController.getAllBooking);
 router.get('/getBookingById/:id', bookingController.getBookingById);
-router.post('/addBooking', bookingController.addBooking);
 router.put('/updateBooking/:id', bookingController.updateBooking);
 router.delete('/deleteBooking/:id', bookingController.deleteBooking);
 

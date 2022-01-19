@@ -38,7 +38,7 @@ module.exports = {
     },
 
     getFlightById: (req, res) => {
-        const id = req.body.id;
+        const id = parseInt(req.params.id);
         flightService.getFlightById(id).then(result => {
             if (result) {
                 res.json({

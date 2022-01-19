@@ -4,11 +4,9 @@ module.exports = {
     addFlight: data => {
         return flightModel.create(data);
     },
-
     getAllFlight: () => {
         return flightModel.find();
     },
-
     getFlightById: id => {
         return flightModel.findById(id);
     },

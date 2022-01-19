@@ -6,9 +6,9 @@ router.get('/', (req, res) => {
     res.send('Inside FlightRouter');
 });
 
+router.post('/addFlight', flightController.addFlight);
 router.get('/getAllFlight', flightController.getAllFlight);
 router.get('/getFlightById/:id', flightController.getFlightById);
-router.post('/addFlight', flightController.addFlight);
 router.put('/updateFlight/:id', flightController.updateFlight);
 router.delete('/deleteFlight/:id', flightController.deleteFlight);
 
