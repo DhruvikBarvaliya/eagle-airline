@@ -7,13 +7,15 @@ module.exports = {
     getAllBooking: () => {
         return bookingModel.find();
     },
-    getBookingById: id => {
-        return bookingModel.findById(id);
+    getBookingById: booking_id => {
+        return bookingModel.findOne(booking_id);
     },
-    updateBooking: (id, body) => {
-        return bookingModel.findByIdAndUpdate(id, body);
+    updateBooking: (booking_id, body) => {
+        return airlineModel.updateOne({ booking_id: booking_id }, body);
+        // return bookingModel.findOneAndUpdate(booking_id, body);
     },
-    deleteBooking: id => {
-        return bookingModel.findByIdAndDelete({ _id: id });
+    deleteBooking: booking_id => {
+        return airlineModel.deleteOne({ booking_id: booking_id });
+        // return bookingModel.findOneAndDelete(booking_id);
     }
 };

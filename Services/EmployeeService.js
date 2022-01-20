@@ -7,13 +7,15 @@ module.exports = {
     getAllEmployee: () => {
         return employeeModel.find();
     },
-    getEmployeeById: id => {
-        return employeeModel.findById(id);
+    getEmployeeById: employee_id => {
+        return employeeModel.findOne(employee_id);
     },
-    updateEmployee: (id, data) => {
-        return employeeModel.findByIdAndUpdate(id, data);
+    updateEmployee: (employee_id, data) => {
+        return airlineModel.updateOne({ employee_id: employee_id }, body);
+        // return employeeModel.findOneAndUpdate(employee_id, data);
     },
-    deleteEmployee: id => {
-        return employeeModel.deleteOne({ _id: id });
+    deleteEmployee: employee_id => {
+        return employeeModel.deleteOne({ employee_id: employee_id });
+        // return employeeModel.findOneAndDelete(employee_id);
     }
 }

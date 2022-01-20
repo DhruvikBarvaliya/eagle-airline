@@ -9,8 +9,8 @@ router.get('/', (req, res) => {
 
 router.post('/addBooking', bookingController.addBooking);
 router.get('/getAllBooking', bookingController.getAllBooking);
-router.get('/getBookingById/:id', bookingController.getBookingById);
-router.put('/updateBooking/:id', bookingController.updateBooking);
-router.delete('/deleteBooking/:id', bookingController.deleteBooking);
+router.get('/getBookingById/:booking_id', bookingController.getBookingById); // Path Variables
+router.put('/updateBooking/:booking_id', bookingController.updateBooking); // Path Variables
+router.delete('/deleteBooking?:booking_id', bookingController.deleteBooking); // Query Params
 
 module.exports = router;

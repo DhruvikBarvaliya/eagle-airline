@@ -8,13 +8,15 @@ module.exports = {
     getAllCity: () => {
         return cityModel.find();
     },
-    getCityById: id => {
-        return cityModel.findById(id);
+    getCityById: city_id => {
+        return cityModel.findOne(city_id);
     },
-    updateCity: (id, body) => {
-        return cityModel.findByIdAndUpdate(id, body);
+    updateCity: (city_id, body) => {
+        // return airlineModel.updateOne({ city_id: city_id }, body);
+        return cityModel.findOneAndUpdate(city_id, body);
     },
-    deleteCity: id => {
-        return cityModel.findByIdAndDelete({ _id: id });
+    deleteCity: city_id => {
+        // return airlineModel.deleteOne({ city_id: city_id });
+        return cityModel.findOneAndDelete(city_id);
     }
 };

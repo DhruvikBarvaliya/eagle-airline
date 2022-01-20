@@ -36,8 +36,8 @@ module.exports = {
         })
     },
     getCityById: (req, res) => {
-        const id = parseInt(req.params.id);
-        cityService.getCityById(id).then(result => {
+        const city_id = req.query.city_id;
+        cityService.getCityById(city_id).then(result => {
             if (result) {
                 res.json({
                     success: 1,
@@ -54,8 +54,8 @@ module.exports = {
     },
     updateCity: (req, res) => {
         const body = req.body;
-        const id = parseInt(req.params.id);
-        cityService.updateCity(id, body).then(result => {
+        const city_id = req.query.city_id;
+        cityService.updateCity(city_id, body).then(result => {
             if (result) {
                 res.json({
                     success: 1,
@@ -71,8 +71,8 @@ module.exports = {
         })
     },
     deleteCity: (req, res) => {
-        const id = parseInt(req.params.id);
-        cityService.deleteCity(id).then(result => {
+        const city_id = req.query.city_id;
+        cityService.deleteCity(city_id).then(result => {
             if (result) {
                 res.json({
                     success: 1,

@@ -37,8 +37,8 @@ module.exports = {
     },
 
     getPassengerById: (req, res) => {
-        const id = parseInt(req.params.id);
-        passengerService.getPassengerById(id).then(result => {
+        const passenger_id = req.params.passenger_id;
+        passengerService.getPassengerById(passenger_id).then(result => {
             if (result) {
                 res.json({
                     success: 1,
@@ -55,8 +55,8 @@ module.exports = {
     },
     updatePassenger: (req, res) => {
         const body = req.body;
-        const id = parseInt(req.params.id)
-        passengerService.updatePassenger(id, body).then(result => {
+        const passenger_id = req.params.passenger_id;
+        passengerService.updatePassenger(passenger_id, body).then(result => {
             if (result) {
                 res.json({
                     success: 1,
@@ -72,8 +72,8 @@ module.exports = {
         })
     },
     deletePassenger: (req, res) => {
-        const id = parseInt(req.params.id);
-        passengerService.deletePassenger(id).then(result => {
+        const passenger_id = req.params.passenger_id;
+        passengerService.deletePassenger(passenger_id).then(result => {
             if (result) {
                 res.json({
                     success: 1,

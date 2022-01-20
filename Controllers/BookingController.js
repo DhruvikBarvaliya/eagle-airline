@@ -35,8 +35,8 @@ module.exports = {
         })
     },
     getBookingById: (req, res) => {
-        const id = parseInt(req.params.id);
-        bookingService.getBookingById(id).then(result => {
+        const booking_id = req.params.booking_id;
+        bookingService.getBookingById(booking_id).then(result => {
             if (result) {
                 res.json({
                     success: 1,
@@ -52,9 +52,9 @@ module.exports = {
         })
     },
     updateBooking: (req, res) => {
-        const body = req.body.id;
-        const id = parseInt(req.params.id);
-        bookingService.updateBooking(id, body).then(result => {
+        const body = req.body;
+        const booking_id = req.params.booking_id;
+        bookingService.updateBooking(booking_id, body).then(result => {
             if (result) {
                 res.json({
                     success: 1,
@@ -70,8 +70,9 @@ module.exports = {
         })
     },
     deleteBooking: (req, res) => {
-        const id = parseInt(req.params.id);
-        bookingService.deleteBooking(id).then(result => {
+        // const booking_id = req.params.booking_id;
+        const booking_id = req.query.booking_id;
+        bookingService.deleteBooking(booking_id).then(result => {
             if (result) {
                 res.json({
                     success: 1,

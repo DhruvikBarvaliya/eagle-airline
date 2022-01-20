@@ -8,9 +8,9 @@ router.get('/', (req, res) => {
 
 router.post('/addFlight', flightController.addFlight);
 router.get('/getAllFlight', flightController.getAllFlight);
-router.get('/getFlightById/:id', flightController.getFlightById);
-router.put('/updateFlight/:id', flightController.updateFlight);
-router.delete('/deleteFlight/:id', flightController.deleteFlight);
+router.get('/getFlightById?:flight_id', flightController.getFlightById); // Query Params
+router.put('/updateFlight?:flight_id', flightController.updateFlight); // Query Params
+router.delete('/deleteFlight?:flight_id', flightController.deleteFlight); // Query Params
 
 module.exports = router;
 

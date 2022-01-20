@@ -38,8 +38,8 @@ module.exports = {
     },
 
     getFlightById: (req, res) => {
-        const id = parseInt(req.params.id);
-        flightService.getFlightById(id).then(result => {
+        const flight_id = req.query.flight_id;
+        flightService.getFlightById(flight_id).then(result => {
             if (result) {
                 res.json({
                     success: 1,
@@ -56,8 +56,8 @@ module.exports = {
     },
     updateFlight: (req, res) => {
         const body = req.body;
-        const id = parseInt(req.params.id)
-        flightService.updateFlight(id, body).then(result => {
+        const flight_id = req.query.flight_id;
+        flightService.updateFlight(flight_id, body).then(result => {
             if (result) {
                 res.json({
                     success: 1,
@@ -73,8 +73,8 @@ module.exports = {
         })
     },
     deleteFlight: (req, res) => {
-        const id = parseInt(req.params.id);
-        flightService.deleteFlight(id).then(result => {
+        const flight_id = req.query.flight_id;
+        flightService.deleteFlight(flight_id).then(result => {
             if (result) {
                 res.json({
                     success: 1,

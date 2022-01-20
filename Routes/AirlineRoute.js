@@ -8,8 +8,8 @@ router.get('/', (req, res) => {
 
 router.post('/addAirline', airlineController.addAirline);
 router.get('/getAllAirline', airlineController.getAllAirline);
-router.get('/getAirlineById/:id', airlineController.getAirlineById);
-router.put('/updateAirline/:id', airlineController.updateAirline);
-router.delete('/deleteAirline/:id', airlineController.deleteAirline);
+router.get('/getAirlineById?:airline_id', airlineController.getAirlineById); // Query Params
+router.put('/updateAirline/:airline_id', airlineController.updateAirline); // Path Variables
+router.delete('/deleteAirline/:airline_id', airlineController.deleteAirline); // Path Variables
 
 module.exports = router;

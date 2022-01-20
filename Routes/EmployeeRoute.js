@@ -8,8 +8,8 @@ router.get('/', (req, res) => {
 
 router.post('/addEmployee', employeeController.addEmployee);
 router.get('/getAllEmployee', employeeController.getAllEmployee);
-router.get('/getEmployeeById/:id', employeeController.getEmployeeById);
-router.put('/updateEmployee/:id', employeeController.updateEmployee);
-router.delete('/deleteEmployee/:id', employeeController.deleteEmployee);
+router.get('/getEmployeeById/:employee_id', employeeController.getEmployeeById); // Path Variables
+router.put('/updateEmployee/:employee_id', employeeController.updateEmployee); // Path Variables
+router.delete('/deleteEmployee/:employee_id', employeeController.deleteEmployee); // Path Variables
 
 module.exports = router;

@@ -40,8 +40,9 @@ module.exports = {
         })
     },
     getAirlineById: (req, res) => {
-        const id = parseInt(req.params.id);
-        airlineService.getAirlineById(id).then(result => {
+        const airline_id = req.query.airline_id;
+        // const airline_id = req.params.airline_id;
+        airlineService.getAirlineById(airline_id).then(result => {
             if (result) {
                 res.json({
                     success: 1,
@@ -58,8 +59,8 @@ module.exports = {
     },
     updateAirline: (req, res) => {
         const body = req.body;
-        const id = parseInt(req.params.id);
-        airlineService.updateAirline(id, body).then(result => {
+        const airline_id = req.params.airline_id;
+        airlineService.updateAirline(airline_id, body).then(result => {
             if (result) {
                 res.json({
                     success: 1,
@@ -75,8 +76,8 @@ module.exports = {
         })
     },
     deleteAirline: (req, res) => {
-        const id = parseInt(req.params.id);
-        airlineService.deleteAirline(id).then(result => {
+        const airline_id = req.params.airline_id;
+        airlineService.deleteAirline(airline_id).then(result => {
             if (result) {
                 res.json({
                     success: 1,

@@ -37,8 +37,8 @@ module.exports = {
     },
 
     getEmployeeById: (req, res) => {
-        const id = parseInt(req.params.id);
-        employeeService.getEmployeeById(id).then(result => {
+        const employee_id = req.params.employee_id;
+        employeeService.getEmployeeById(employee_id).then(result => {
             if (result) {
                 res.json({
                     success: 1,
@@ -55,8 +55,8 @@ module.exports = {
     },
     updateEmployee: (req, res) => {
         const body = req.body;
-        const id = parseInt(req.params.id)
-        employeeService.updateEmployee(id, body).then(result => {
+        const employee_id = req.params.employee_id;
+        employeeService.updateEmployee(employee_id, body).then(result => {
             if (result) {
                 res.json({
                     success: 1,
@@ -72,8 +72,8 @@ module.exports = {
         })
     },
     deleteEmployee: (req, res) => {
-        const id = parseInt(req.params.id);
-        employeeService.deleteEmployee(id).then(result => {
+        const employee_id = req.params.employee_id;
+        employeeService.deleteEmployee(employee_id).then(result => {
             if (result) {
                 res.json({
                     success: 1,

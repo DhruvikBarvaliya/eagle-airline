@@ -36,8 +36,8 @@ module.exports = {
 
     },
     getAirportById: (req, res) => {
-        const id = parseInt(req.params.id);
-        airportService.getAirportById(id).then(result => {
+        const airport_id = req.params.airport_id;
+        airportService.getAirportById(airport_id).then(result => {
             if (result) {
                 res.json({
                     success: 1,
@@ -54,8 +54,9 @@ module.exports = {
     },
     updateAirport: (req, res) => {
         const body = req.body;
-        const id = parseInt(req.params.id);
-        airportService.updateAirport(id, body).then(result => {
+        const airport_id = req.query.airport_id;
+        // const airport_id = req.params.airport_id;
+        airportService.updateAirport(airport_id, body).then(result => {
             if (result) {
                 res.json({
                     success: 1,
@@ -71,8 +72,8 @@ module.exports = {
         })
     },
     deleteAirport: (req, res) => {
-        const id = parseInt(req.params.id);
-        airportService.deleteAirport(id).then(result => {
+        const airport_id = req.params.airline_id;
+        airportService.deleteAirport(airport_id).then(result => {
             if (result) {
                 res.json({
                     success: 1,

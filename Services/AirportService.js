@@ -7,13 +7,17 @@ module.exports = {
     getAllAirport: () => {
         return airportModel.find();
     },
-    getAirportById: (id) => {
-        return airportModel.findById(id);
+    getAirportById: (airport_id) => {
+        return airportModel.findOne(airport_id);
     },
-    updateAirport: (id, body) => {
-        return airportModel.findByIdAndUpdate(id, body);
+    updateAirport: (airport_id, body) => {
+        return airportModel.findOneAndUpdate(airport_id, body);
+        // return airlineModel.updateOne({ airport_id: airport_id }, body);
+
     },
-    deleteAirport: (id) => {
-        return airportModel.findByIdAndDelete({ _id: id });
+    deleteAirport: (airport_id) => {
+        return airportModel.findOneAndDelete(airport_id);
+        // return airlineModel.deleteOne({ airport_id: airport_id });
+
     }
 }

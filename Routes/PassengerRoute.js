@@ -8,8 +8,8 @@ router.get('/', (req, res) => {
 
 router.post('/addPassenger', passengerController.addPassenger);
 router.get('/getAllPassenger', passengerController.getAllPassenger);
-router.get('/getPassengerById/:id', passengerController.getPassengerById);
-router.put('/updatePassenger/:id', passengerController.updatePassenger);
-router.delete('/deletePassenger/:id', passengerController.deletePassenger);
+router.get('/getPassengerById/:passenger_id', passengerController.getPassengerById); // Path Variables
+router.put('/updatePassenger/:passenger_id', passengerController.updatePassenger); // Path Variables
+router.delete('/deletePassenger/:passenger_id', passengerController.deletePassenger); // Path Variables
 
 module.exports = router;

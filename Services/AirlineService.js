@@ -7,13 +7,15 @@ module.exports = {
     getAllAirline: () => {
         return airlineModel.find();
     },
-    getAirlineById: id => {
-        return airlineModel.findById(id);
+    getAirlineById: airline_id => {
+        return airlineModel.findOne(airline_id);
     },
-    updateAirline: (id, body) => {
-        return airlineModel.findByIdAndUpdate(id, body);
+    updateAirline: (airline_id, body) => {
+        return airlineModel.updateOne({ airline_id: airline_id }, body);
+        // return airlineModel.findOneAndUpdate(airline_id, body);
     },
-    deleteAirline: id => {
-        return airlineModel.findByIdAndDelete({ _id: id });
+    deleteAirline: airline_id => {
+        return airlineModel.deleteOne({ airline_id: airline_id });
+        // return airlineModel.findOneAndDelete(airline_id);
     }
 };
