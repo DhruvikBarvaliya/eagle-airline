@@ -13,6 +13,7 @@ EmployeeSchema = new Schema({
     address: { type: String, trim: true },
     city: { type: String, trim: true },
     zip_code: { type: Number, trim: true },
+    state: { type: String, trim: true },
     country: { type: String, trim: true },
     email_id: { type: String, unique: true, trim: true },
     contact_no: { type: String, trim: true },
@@ -25,7 +26,7 @@ EmployeeSchema = new Schema({
     shift: { type: String, default: 'DayShift', trim: true },
     job_type: { type: String, trim: true },
     position: { type: String, trim: true },
-    airport_id: { type: String,required: true, ref: 'airports', trim: true }
+    airport_id: { type: String, required: true, ref: 'airports', trim: true }
 },
     { versionKey: false });
 
