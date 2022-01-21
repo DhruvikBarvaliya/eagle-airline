@@ -8,7 +8,8 @@ module.exports = {
         return airportModel.find();
     },
     getAirportById: (airport_id) => {
-        return airportModel.findOne(airport_id);
+        return airportModel.findOne({ airport_id: airport_id });
+        // return airportModel.findById(airport_id);
     },
     updateAirport: (airport_id, body) => {
         return airportModel.findOneAndUpdate(airport_id, body);

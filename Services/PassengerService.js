@@ -8,11 +8,12 @@ module.exports = {
         return passengerModel.find();
     },
     getPassengerById: passenger_id => {
-        return passengerModel.find(passenger_id);
+        return passengerModel.find({ passenger_id: passenger_id });
+        // return passengerModel.find(passenger_id);
     },
     updatePassenger: (passenger_id, data) => {
         // return airlineModel.updateOne({ passenger_id: passenger_id }, body);
-        return passengerModel.findByIdAndUpdate(passenger_id, data);
+        return passengerModel.findOneAndUpdate(passenger_id, data);
     },
     deletePassenger: passenger_id => {
         // return passengerModel.deleteOne({ passenger_id: passenger_id });

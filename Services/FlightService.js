@@ -8,10 +8,11 @@ module.exports = {
         return flightModel.find();
     },
     getFlightById: flight_id => {
-        return flightModel.findOne(flight_id);
+        return flightModel.findOne({flight_id:flight_id});
+        // return flightModel.findOne(flight_id);
     },
     updateFlight: (flight_id, data) => {
-        return flightModel.findByIdAndUpdate(flight_id, data);
+        return flightModel.findOneAndUpdate(flight_id, data);
         // return airlineModel.updateOne({ flight_id: flight_id }, body);
     },
     deleteFlight: flight_id => {

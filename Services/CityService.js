@@ -9,7 +9,8 @@ module.exports = {
         return cityModel.find();
     },
     getCityById: city_id => {
-        return cityModel.findOne(city_id);
+        return cityModel.findOne({city_id:city_id});
+        // return cityModel.findById(city_id);
     },
     updateCity: (city_id, body) => {
         // return airlineModel.updateOne({ city_id: city_id }, body);
