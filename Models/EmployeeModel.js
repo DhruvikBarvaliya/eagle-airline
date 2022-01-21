@@ -25,7 +25,7 @@ EmployeeSchema = new Schema({
     shift: { type: String, default: 'DayShift', trim: true },
     job_type: { type: String, trim: true },
     position: { type: String, trim: true },
-    airport_id: { type: mongoose.Schema.Types.ObjectId,/* required: true, */ ref: 'airports', trim: true }
+    airport_id: { type: String,required: true, ref: 'airports', trim: true }
 },
     { versionKey: false });
 

@@ -13,8 +13,8 @@ const FlightSchema = new Schema({
     layover_time: { type: Date, trim: true },
     no_of_stope: { type: Number, default: 0, trim: true },
     distance: { type: Number, required: true, trim: true },
-    airline_id: { type: mongoose.Schema.Types.ObjectId, ref: 'airlines', trim: true },
-    airport_id: { type: mongoose.Schema.Types.ObjectId, ref: 'airports', trim: true },
+    airline_id: { type: String, ref: 'airlines', trim: true },
+    airport_id: { type: String, ref: 'airports', trim: true },
     fares: { type: Number, required: true, trim: true },
     status: { type: Boolean, default: true, trim: true }
 },
