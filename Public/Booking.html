@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <fieldset style="width:fit-content" >
+    <fieldset style="width:fit-content">
         <legend>Ticket Booking Form</legend>
         <form action="" method="post">
             <label for="booking_id">Booking Id :</label>
@@ -19,7 +19,10 @@
             <input type="text" name="seat_no" id="seat_no" placeholder="Enter Seat No.">
             <br><br>
             <label for="class">Class :</label>
-            <input type="text" name="class" id="class" placeholder="Enter Class">
+            <select name="class" id="class">
+                <option value="economy">Economy</option>
+                <option value="business">Business</option>
+            </select>
             <br><br>
             <label for="passenger_id">Passenger Id :</label>
             <input type="text" name="passenger_id" id="passenger_id" placeholder="Enter Passenger Id">
@@ -34,10 +37,10 @@
             <input type="text" name="last_name" id="last_name" placeholder="Enter Last Name">
             <br><br>
             <label for="contact_no">Contact No. :</label>
-            <input type="text" name="contact_no" id="contact_no" placeholder="Enter Contact No.">
+            <input type="tel" name="contact_no" id="contact_no" placeholder="Enter Contact No.">
             <br><br>
             <label for="email_id">Email Id :</label>
-            <input type="text" name="email_id" id="email_id" placeholder="Enter Email Id">
+            <input type="email" name="email_id" id="email_id" placeholder="Enter Email Id">
             <br><br>
             <label for="flight_id">Flight Id :</label>
             <input type="text" name="flight_id" id="flight_id" placeholder="Enter Flight Id">
@@ -52,23 +55,27 @@
             <input type="text" name="destination" id="destination" placeholder="Enter Destination">
             <br><br>
             <label for="depature_date_time">Depature Date & Time :</label>
-            <input type="text" name="depature_date_time" id="depature_date_time"
+            <input type="datetime-local" name="depature_date_time" id="depature_date_time"
                 placeholder="Enter Depature Date & Time">
             <br><br>
             <label for="arrival_date_time">Arrival Date & Time :</label>
-            <input type="text" name="arrival_date_time" id="arrival_date_time" placeholder="Enter Arrival Date & Time">
+            <input type="datetime-local" name="arrival_date_time" id="arrival_date_time"
+                placeholder="Enter Arrival Date & Time">
             <br><br>
             <label for="fare">Fare :</label>
-            <input type="text" name="fare" id="fare" placeholder="Enter Fare">
-            <br><br>
-            <label for="insurance">Insurance :</label>
-            <input type="text" name="insurance" id="insurance" placeholder="Enter Insurance">
+            <input type="number" name="fare" id="fare" placeholder="Enter Fare" min="0">
             <br><br>
             <label for="date_of_booking">Date Of Booking :</label>
-            <input type="text" name="date_of_booking" id="date_of_booking" placeholder="Enter Date Of Booking">
+            <input type="date" name="date_of_booking" id="date_of_booking" placeholder="Enter Date Of Booking">
             <br><br>
             <label for="date_of_travel">Date Of Travel :</label>
-            <input type="text" name="date_of_travel" id="date_of_travel" placeholder="Enter Date Of Travel">
+            <input type="date" name="date_of_travel" id="date_of_travel" placeholder="Enter Date Of Travel">
+            <br><br>
+            <p>Want Insurane for Travlling?</p>
+            <input type="radio" name="insurance" id="yes" value="yes" checked>
+            <label for="yes">Yes</label>
+            <input type="radio" name="insurance" id="no" value="no">
+            <label for="no">No</label>
             <br><br>
             <input type="submit" value="Add Airline">
             <input type="reset" value="Reset">

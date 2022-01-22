@@ -28,7 +28,7 @@
             <input type="text" name="passport_no" id="passport_no" placeholder="Enter Passport No">
             <br><br>
             <label for="date_of_birth">Date Of Birth :</label>
-            <input type="text" name="date_of_birth" id="date_of_birth" placeholder="Enter Date Of Birth">
+            <input type="date" name="date_of_birth" id="date_of_birth" placeholder="Enter Date Of Birth">
             <br><br>
             <label for="sex">Sex :</label>
             <input type="text" name="sex" id="sex" placeholder="Enter Sex">
@@ -40,7 +40,7 @@
             <input type="text" name="city" id="city" placeholder="Enter City">
             <br><br>
             <label for="zip_code">Zip Code :</label>
-            <input type="text" name="zip_code" id="zip_code" placeholder="Enter Zip Code">
+            <input type="number" name="zip_code" id="zip_code" placeholder="Enter Zip Code" min="0">
             <br><br>
             <label for="state">State :</label>
             <input type="text" name="state" id="state" placeholder="Enter State">
@@ -49,10 +49,10 @@
             <input type="text" name="country" id="country" placeholder="Enter Country">
             <br><br>
             <label for="email_id">Email Id :</label>
-            <input type="text" name="email_id" id="email_id" placeholder="Enter Email Id">
+            <input type="email" name="email_id" id="email_id" placeholder="Enter Email Id">
             <br><br>
             <label for="contact_no">Contact No :</label>
-            <input type="text" name="contact_no" id="contact_no" placeholder="Enter Contact No">
+            <input type="tel" name="contact_no" id="contact_no" placeholder="Enter Contact No">
             <br><br>
             <label for="user_name">User Name :</label>
             <input type="text" name="user_name" id="user_name" placeholder="Enter User Name">
@@ -64,22 +64,52 @@
             <input type="text" name="confirm_password" id="confirm_password" placeholder="Enter Confirm Password">
             <br><br>
             <label for="department_name">Department Name :</label>
-            <input type="text" name="department_name" id="department_name" placeholder="Enter Department Name">
+            <select name="department_name" id="department_name">
+                <option value="landsideOperation">Landside Operation</option>
+                <option value="airsideOperation">Airside Operation</option>
+                <option value="billing&invoice">Billing & Invoice</option>
+                <option value="informationManagement">Information Management</option>
+            </select>
             <br><br>
             <label for="hired_date">Hired Date :</label>
-            <input type="text" name="hired_date" id="hired_date" placeholder="Enter Hired Date">
+            <input type="date" name="hired_date" id="hired_date" placeholder="Enter Hired Date">
             <br><br>
             <label for="salary">Salary :</label>
-            <input type="text" name="salary" id="salary" placeholder="Enter Salary">
+            <input type="number" name="salary" id="salary" placeholder="Enter Salary" min="0">
             <br><br>
             <label for="shift">Shift :</label>
-            <input type="text" name="shift" id="shift" placeholder="Enter Shift">
+            <select name="shift" id="shift">
+                <option value="morning">Morning Shift</option>
+                <option value="Evening">Evening Shift</option>
+                <option value="Night">Night Shift</option>
+            </select>
             <br><br>
             <label for="job_type">Job Type :</label>
-            <input type="text" name="job_type" id="job_type" placeholder="Enter Job Type">
+            <select name="job_type" id="job_type">
+                <option value="passengerAssistant">Passenger Assistant</option>
+                <option value="airlineFoodServiceWorker">Airline Food Service Worker</option>
+                <option value="airlineBaggageHandler">Airline Baggage Handler</option>
+                <option value="airportSecurityOfficer">Airport Security Officer</option>
+                <option value="aircraftFueler">Aircraft Fueler</option>
+                <option value="airlineReservationAgent">Airline Reservation Agent</option>
+                <option value="flightDispatcher">Flight Dispatcher</option>
+                <option value="flightAttendant">Flight Attendant</option>
+                <option value="aircraftMaintenanceTechnican">Aircraft Maintenance Technican</option>
+                <option value="airTrafficController">Air Traffic Controller</option>
+                <option value="aircraftMechanic">Aircraft Mechanic</option>
+                <option value="aircraftmanager">Aircraft manager</option>
+                <option value="airportPlanner">Airport Planner</option>
+                <option value="pilot">Pilot</option>
+                <option value="airportEngineer">Airport Engineer</option>
+                <option value="aeronuticalEngineer">Aeronutical Engineer</option>
+            </select>
             <br><br>
             <label for="position">Position :</label>
-            <input type="text" name="position" id="position" placeholder="Enter Position">
+            <select name="position" id="position">
+                <option value="level1">Level-1</option>
+                <option value="level2">Level-2</option>
+                <option value="level3">Level-3</option>
+            </select>
             <br><br>
             <label for="airport_id">Airport Id :</label>
             <input type="text" name="airport_id" id="airport_id" placeholder="Enter Airport Id">

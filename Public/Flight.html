@@ -29,20 +29,21 @@
             <input type="text" name="flight_arrival_to" id="flight_arrival_to" placeholder="Enter Flight Arrival To">
             <br><br>
             <label for="depature_date_time">Depature Date & Time :</label>
-            <input type="text" name="depature_date_time" id="depature_date_time"
+            <input type="datetime-local" name="depature_date_time" id="depature_date_time"
                 placeholder="Enter Depature Date & Time">
             <br><br>
             <label for="arrival_date_time">Arrival Date & Time :</label>
-            <input type="text" name="arrival_date_time" id="arrival_date_time" placeholder="Enter Arrival Date & Time">
+            <input type="datetime-local" name="arrival_date_time" id="arrival_date_time"
+                placeholder="Enter Arrival Date & Time">
             <br><br>
             <label for="layover_time">Layover Time :</label>
             <input type="text" name="layover_time" id="layover_time" placeholder="Enter Layover Time">
             <br><br>
             <label for="no_of_stope">No Of Stope :</label>
-            <input type="text" name="no_of_stope" id="no_of_stope" placeholder="Enter No Of Stope">
+            <input type="number" name="no_of_stope" id="no_of_stope" placeholder="Enter No Of Stope" min="0">
             <br><br>
             <label for="distance">Distance :</label>
-            <input type="text" name="distance" id="distance" placeholder="Enter Distance">
+            <input type="number" name="distance" id="distance" placeholder="Enter Distance In KM" step="any" min="0">
             <br><br>
             <label for="airline_id">Airline Id :</label>
             <input type="text" name="airline_id" id="airline_id" placeholder="Enter Airline Id">
@@ -51,10 +52,19 @@
             <input type="text" name="airport_id" id="airport_id" placeholder="Enter Airport Id">
             <br><br>
             <label for="fares">Fares :</label>
-            <input type="text" name="fares" id="fares" placeholder="Enter Fares">
+            <input type="number" name="fares" id="fares" placeholder="Enter Fares" min="0" step="any">
             <br><br>
             <label for="status">Status :</label>
-            <input type="text" name="status" id="status" placeholder="Enter Status">
+            <select name="status" id="status">
+                <option value="ontime">On Time</option>
+                <option value="cancelled">Cancelled</option>
+                <option value="delayed">Delayed</option>
+                <option value="inair">In Air</option>
+                <option value="diverted">Diverted</option>
+                <option value="landed">Landed</option>
+                <option value="arrived">Arrived</option>
+                <option value="active">Active</option>
+            </select>
             <br><br>
             <input type="submit" value="Add Flight">
             <input type="reset" value="Reset">
