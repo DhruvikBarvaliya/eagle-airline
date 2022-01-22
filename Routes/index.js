@@ -8,9 +8,13 @@ const employeeRouter = require('./EmployeeRoute');
 const flightRouter = require('./FlightRoute');
 const passengerRouter = require('./PassengerRoute');
 
-router.get('/', (req, res) => {
+/* router.get('/', (req, res) => {
     res.send('Welcome to Eagle Airline');
-});
+}); */
+
+router.get('/', (req, res) => {
+    return res.redirect('Home.html')
+})
 
 router.use('/api',
     airlineRouter,

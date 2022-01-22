@@ -11,7 +11,7 @@
 <body>
     <fieldset style="width:fit-content">
         <legend>Passenger Creation Form</legend>
-        <form action="" method="post">
+        <form action="/api/addPassenger" method="post">
             <label for="passenger_id">Passenger Id :</label>
             <input type="text" name="passenger_id" id="passenger_id" placeholder="Enter Passenger Id">
             <br><br>
@@ -27,8 +27,11 @@
             <label for="date_of_birth">Date Of Birth :</label>
             <input type="date" name="date_of_birth" id="date_of_birth">
             <br><br>
-            <label for="sex">Sex :</label>
-            <input type="text" name="sex" id="sex" placeholder="Enter Sex">
+            <label for="sex">Sex :-</label>
+            <label for="sex">Male</label>
+            <input type="radio" name="sex" id="male" checked>
+            <label for="sex">Female</label>
+            <input type="radio" name="sex" id="female">
             <br><br>
             <label for="address">Address :</label>
             <input type="text" name="address" id="address" placeholder="Enter Address">
@@ -52,10 +55,10 @@
             <input type="text" name="user_name" id="user_name" placeholder="Enter User Name">
             <br><br>
             <label for="password">Password :</label>
-            <input type="text" name="password" id="password" placeholder="Enter Password">
+            <input type="password" name="password" id="password" placeholder="Enter Password">
             <br><br>
             <label for="confirm_password">Confirm Password :</label>
-            <input type="text" name="confirm_password" id="confirm_password" placeholder="Enter Confirm Password">
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Enter Confirm Password">
             <br><br>
             <label for="passport_no">Passport No :</label>
             <input type="text" name="passport_no" id="passport_no" placeholder="Enter Passport No">
