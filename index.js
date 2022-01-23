@@ -9,7 +9,7 @@ database();
 app.use(express.static('Public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
-app.use('/', indexRouter)
+app.use(indexRouter)
 
 /* app.get('/',(req,res)=>{
     return res.redirect('Home.html')
